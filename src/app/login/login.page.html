@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="primary">
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <img class="Logo" src="assets/logo.png">
+      <ion-item>  
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>  
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+      <br>
+      <div style="text-align: right">
+        <a href="">Olvide mi contraseña</a>
+      </div>
+      <br>
+      <ion-button shape="round" expand="block" (click)="Ingresar()">Ingresar</ion-button>
+      <br>
+      <ion-button expand="block" fill="clear" routerLink="/registro"> Crear cuenta</ion-button>
+      <br>
+      <div style="text-align: center;">
+        <ion-chip color="facebook" (click)="LoginGoogle()">
+          <img style="width: 20px; height: 20px; margin-right: 8px;" src="https://img.icons8.com/color/48/000000/google-logo.png"/>
+          <ion-label>Accede con Google</ion-label>
+        </ion-chip>
+        <ion-chip color="facebook" (click)="LoginFacebook()"> 
+          <ion-icon name="logo-facebook" ></ion-icon>
+          <ion-label>Accede con Facebook</ion-label>
+        </ion-chip>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
