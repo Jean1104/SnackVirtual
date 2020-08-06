@@ -40,7 +40,8 @@ export class LoginPage implements OnInit {
       })
     } else {
       this.auth.login_Google_Web().then( res => {
-        this.router.navigate(['home'])
+        console.log(res);
+        //this.router.navigate(['home'])
       }).catch( error => {
         alert('Error de registro web')
       })
