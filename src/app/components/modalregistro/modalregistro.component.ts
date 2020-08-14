@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../servicios/auth.service';
+import { AuthService } from '../../servicios/auth.service';
 import { Router } from '@angular/router';
-import { Usuario } from '../modelos/usuario';
+import { Usuario } from '../../modelos/usuario';
+import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-registro',
-  templateUrl: './registro.page.html',
-  styleUrls: ['./registro.page.scss'],
+  selector: 'app-modalregistro',
+  templateUrl: './modalregistro.component.html',
+  styleUrls: ['./modalregistro.component.scss'],
 })
-export class RegistroPage implements OnInit {
+export class ModalregistroComponent implements OnInit {
 
   nombre: string = "";
   apellido: string = "";
@@ -20,14 +21,13 @@ export class RegistroPage implements OnInit {
   constructor(
     private auth: AuthService,
     private router: Router,
+    public modalController: ModalController
   ) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   Atras() {
-    this.router.navigate(['login'])
+    this.modalController.dismiss();
   }
 
   Registro() {

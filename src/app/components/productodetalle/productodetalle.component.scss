@@ -1,0 +1,100 @@
+ion-content {
+    --background: #fff4f4;
+}
+
+.ImgHome {
+    width: 100%;
+}
+
+.header {
+    top: 3%;
+    left: 2%;
+    position: absolute; 
+
+    ion-button {
+        --background: #f9f9f996;
+        --color: #4a2925c9;
+        --border-style: solid;
+        --border-color: #eeeeee;
+        --border-width: 0.5px;
+        --border-radius: 15px;
+        height: 50px;
+    }
+}
+
+.header2 {
+    top: 3%;
+    right: 2%;
+    position: absolute; 
+
+    ion-button {
+        --background: #f9f9f996;
+        --color: #4a2925c9;
+        --border-style: solid;
+        --border-color: #eeeeee;
+        --border-width: 0.5px;
+        --border-radius: 15px;
+        height: 50px;
+    }
+}
+
+ion-card {
+    margin: 0;
+    margin-top: -40px;
+    border-top-left-radius: 44px;
+    border-top-right-radius: 44px;
+
+    .content-producto {
+        padding: 8% 10%;
+        background-color: #ffffff;
+
+        .titulo {
+            font-size: 20px;
+            font-family: 'Sniglet', cursive;
+            font-weight: bold;
+        }
+
+        .subtitulo {
+            margin-top: 4px;
+            font-size: 16px;
+            font-family: 'Sniglet', cursive;
+        }
+
+        .titulo-favoritos {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+
+            .precio {
+                margin-top: 8px;
+                font-size: 28px;
+            }
+
+            ion-button {
+                --background: #f9f9f996;
+                --color: #4a2925c9;
+                --border-style: solid;
+                --border-color: #eeeeee;
+                --border-width: 0.5px;
+                --border-radius: 10px;
+                height: 40px;
+            }
+        }
+
+        .buton-aniadir {
+            text-align: center;
+            margin-top: 20px;
+
+            ion-button {
+                --background: #50260ee8;
+                --color: #ffffffc9;
+                --border-style: solid;
+                --border-color: #6e311e;
+                --border-width: 0.5px;
+                --border-radius: 20px;
+                height: 40px;
+                text-transform: inherit;
+            }
+        }
+    }
+}

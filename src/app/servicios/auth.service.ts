@@ -18,7 +18,8 @@ export class AuthService {
     private AFauth: AngularFireAuth,
     private facebook: Facebook,
     private googleplus: GooglePlus,
-    private router: Router
+    private router: Router,
+    private db: AngularFirestore
   ) { }
 
   login(email: string, password: string) {
@@ -68,6 +69,14 @@ export class AuthService {
 
   login_facebook_Web() {
     return this.AFauth.signInWithPopup(new auth.FacebookAuthProvider())
+  }
+
+  get_user_auth() {
+    return this.AFauth.authState
+  }
+
+  get_categorias() {
+    return this.db.collection('categorias').valueChanges();
   }
 
 }

@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-text>
+    <h1> Bienvenido </h1>
+    <p> Para empezar, accede a la plataforma con tu cuenta.</p>
+  </ion-text>
+  <div class="actions">
+    <div class="login-buttons">
+      <ion-button (click)="LoginFacebook()">
+        <ion-avatar>
+          <img src="/assets/facebook.png">
+        </ion-avatar>
+        <ion-label> Facebook </ion-label>
+      </ion-button>
+      <ion-button (click)="LoginGoogle()">
+        <ion-avatar>
+          <img src="https://img.icons8.com/color/48/000000/google-logo.png">
+        </ion-avatar>
+        <ion-label> Google </ion-label>
+      </ion-button>
+    </div>
+    <div class="separator">
+      <span> o </span>
+      <span class="line left"></span>
+      <span class="line right"></span>
+    </div>
+    <ion-button class="signup-btn" expand="block" routerLink="/login"> Acceder con E-mail</ion-button>
+    <p class="login"> Si ya eres miembro <a> Inicia Sesióm ahora </a></p>
+  </div>
+</ion-content>

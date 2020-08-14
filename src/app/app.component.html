@@ -1,3 +1,56 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <!--<ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>-->
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="/assets/imgperfil2.jpg" alt="">
+        <ion-label>
+          <h2>Jean Alvarez</h2>
+          <p>Programador</p>
+        </ion-label>
+      </div>
+    </ion-header>
+    <ion-content>
+      <ion-list class="menu-items">
+        <ion-menu-toggle>
+          <ion-item class="active" routerLink="/home" detail>
+            <ion-icon name="home-outline" slot="start"></ion-icon>
+            <ion-label> Inicio </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/favoritos" detail>
+            <ion-icon name="heart-outline" slot="start"></ion-icon>
+            <ion-label> Favoritos </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/carrito" detail>
+            <ion-icon name="cart-outline" slot="start"></ion-icon>
+            <ion-label> Mi carrito </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/perfil" detail>
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label> Mi cuenta </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item (click)="Logout()">
+            <ion-icon name="power-outline" slot="start"></ion-icon>
+            <ion-label> Cerrar Sesión </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

@@ -1,0 +1,10 @@
+<app-header titulo="inicio"></app-header>
+
+<ion-content>
+  <div *ngFor="let categoria of categorias">
+    <ion-card (click)="VerProductos(categoria)" style="border-radius: 40px;">
+      <img class="ImgHome" [src]="categoria.url_imagen"/>
+    </ion-card>
+  </div>
+</ion-content>
+

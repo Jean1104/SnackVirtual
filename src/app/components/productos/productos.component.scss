@@ -1,0 +1,33 @@
+ion-toolbar {
+    --background: #fff4f4;
+}
+
+ion-content {
+    --background: #fff4f4;
+}
+
+ion-col {
+    padding-bottom: 10px;
+
+    .ImgHome {
+        width: 100%;
+        //height: 150px;
+        border-radius: 20px; 
+        padding-bottom: 5px;
+    }
+    
+    .titulo {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: 3px;
+        font-family: 'Sniglet', cursive;
+    }
+    
+    .precio {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        font-family: 'Sniglet', cursive;
+    }
+}

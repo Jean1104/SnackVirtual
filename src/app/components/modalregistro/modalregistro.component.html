@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="primary" style="text-align: center;">
+    <ion-buttons slot="start">
+      <ion-button (click)="Atras()">
+        <ion-icon ios="chevron-back-outline" md="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Registro por E-mail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <img class="Logo" src="assets/imagen_registro.jpg">
+      <br>
+      <h1 style="text-align: center;">Datos Principales</h1>
+      <ion-list>
+        <ion-item>  
+          <ion-label position="floating">Nombres</ion-label>
+          <ion-input type="text" [(ngModel)]="nombre" name="nombre"></ion-input>
+        </ion-item>
+        <ion-item>  
+          <ion-label position="floating">Apellidos</ion-label>
+          <ion-input type="text" [(ngModel)]="apellido" name="apellido"></ion-input>
+        </ion-item>
+        <ion-item>  
+          <ion-label position="floating">Celular</ion-label>
+          <ion-input type="number" [(ngModel)]="celular" name="celular"></ion-input>
+        </ion-item>
+        <ion-item>  
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+        <ion-item>  
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Deber tener al menos 6 dígitos"></ion-input>
+        </ion-item>
+        <ng-template [ngIf]="ver_codigo" [ngIfElse]="ver" >
+          <ion-item>  
+            <ion-label position="floating">Ingresa celular de referencia (opcional) </ion-label>
+            <ion-input type="number" [(ngModel)]="codigo" name="codigo"></ion-input>
+          </ion-item>
+        </ng-template>
+        <ng-template #ver>
+          <br>
+          <div style="text-align: center;">
+            <ion-chip color="primary" (click)="ver_codigo=true">
+              <ion-label>Click aquí si tienes un usuario de referencia (opcional)</ion-label>
+            </ion-chip>
+          </div>
+          <br>
+        </ng-template>
+      </ion-list>
+      <ion-button shape="round" expand="block" (click)="Registro()">Registrarse</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

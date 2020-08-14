@@ -1,0 +1,24 @@
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <img src="./assets/induccion1.jpg"/>
+      <h2>Hola, Up-gustero</h2>
+      <p>Con <b>Up-Gusto</b> podras encontrar la mejor comida peruana. Solo elige la categoria y la comida a pedir.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/induccion2.jpg"/>
+      <h2>Detalles de tu pedido</h2>
+      <p>Ve los detalles del plato y principalmente de los precios que te brindamos a comparacion con el mercado. Finalmente añadelo al carrito de compra</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="/assets/induccion3.jpg"/>
+      <h2>Haz el pago</h2>
+      <p>En el carrito d compra estaran tus pedidos. Tenemos dos modos de entrega: Recoges tu pedido, o solicitas delivery</p>
+    </ion-slide>
+  </ion-slides>
+  <div style="text-align: center; background-color: #460000; height: 100%; padding-top: 7px;">
+    <ion-button color="primary" [routerLink]="['/welcome']">Saltar</ion-button>
+  </div>
+</ion-content>

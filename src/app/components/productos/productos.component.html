@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Productos</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="Dimiss()">
+        <ion-icon slot="icon-only" ios="chevron-back-outline" md="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let producto of productos" size="6" (click)="DetalleProducto(producto)">
+        <img class="ImgHome" [src]="producto.url_imagen"/>
+        <div class="titulo"> {{ producto.nombre }} </div>
+        <div class="precio"> S/ {{ producto.precio_real }} </div>
+      </ion-col>
+    </ion-row>
+    
+  </ion-grid>
+</ion-content>

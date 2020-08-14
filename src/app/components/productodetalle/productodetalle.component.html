@@ -1,0 +1,31 @@
+<ion-content>
+  <img class="ImgHome" [src]="producto.url_imagen"/>
+  <div class="header">
+    <ion-button (click)="Dimiss()">
+      <ion-icon slot="icon-only" ios="chevron-back-outline" md="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="header2">
+    <ion-button (click)="Carrito()">
+      <ion-icon slot="icon-only" ios="cart" md="cart"></ion-icon>
+    </ion-button>
+  </div>
+  <ion-card>
+    <div class="content-producto">
+      <div class="titulo"> {{ producto.nombre }} </div>
+      <div class="subtitulo"> by Balu Coffee </div>
+      <div class="titulo-favoritos"> 
+        <span class="precio"> {{ producto.precio_real }} </span>
+        <ion-button>
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="buton-aniadir">
+        <ion-button block="expand" shape="round">
+          Añadir al carrito
+        </ion-button>
+      </div>
+    </div>
+  </ion-card>    
+</ion-content>
+

@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../servicios/auth.service';
+import { AuthService } from 'src/app/servicios/auth.service';
 import { Router } from '@angular/router';
 import { Platform } from '@ionic/angular';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-welcome',
+  templateUrl: './welcome.page.html',
+  styleUrls: ['./welcome.page.scss'],
 })
-export class LoginPage implements OnInit {
-
-  email: string;
-  password: string;
+export class WelcomePage implements OnInit {
 
   constructor(
     private auth: AuthService,
@@ -20,15 +17,6 @@ export class LoginPage implements OnInit {
   ) { }
 
   ngOnInit() {
-
-  }
-
-  Ingresar() {
-    this.auth.login(this.email, this.password).then( res => {
-      this.router.navigate(['home'])
-    }).catch( error => {
-      alert('Error de ingreso')
-    })
   }
 
   LoginGoogle() {
@@ -41,7 +29,7 @@ export class LoginPage implements OnInit {
     } else {
       this.auth.login_Google_Web().then( res => {
         console.log(res);
-        //this.router.navigate(['home'])
+        this.router.navigate(['home'])
       }).catch( error => {
         alert('Error de registro web')
       })
@@ -63,7 +51,7 @@ export class LoginPage implements OnInit {
         alert('Error de registro web')
       })
     }
-    
   }
+
 
 }
